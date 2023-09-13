@@ -1,0 +1,12 @@
+build.doFirst {
+    println("Building Ballerina")
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        exec { 
+        	commandLine 'C:\\Program Files\\Ballerina\\bin\\bal.bat', 'build'
+        }
+    } else {
+        exec { 
+        	commandLine 'bal', 'build'
+        }
+    }
+}

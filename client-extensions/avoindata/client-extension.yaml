@@ -1,0 +1,14 @@
+assemble:
+    - fromTask: bootJar
+liferay-ballerina-avoindata-oauth-application-user-agent:
+    .serviceAddress: localhost:9090
+    .serviceScheme: http
+    name: Liferay Ballerina avoindata OAuth Application User Agent
+    scopes:
+        - Liferay.Headless.Admin.Workflow.everything
+    type: oAuthApplicationUserAgent
+liferay-ballerina-avoindata-company-object-entry-manager:
+    name: Ballerina avoindata Company Entry Manager
+    oAuth2ApplicationExternalReferenceCode: liferay-ballerina-avoindata-oauth-application-user-agent
+    resourcePath: /company
+    type: objectEntryManager
